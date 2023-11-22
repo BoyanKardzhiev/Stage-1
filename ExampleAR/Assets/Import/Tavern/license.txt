@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Medieval Tavern
+* source:	https://sketchfab.com/3d-models/low-poly-medieval-tavern-837fb34a8f7e4c9b9b9153ef9dea9e05
+* author:	Shift4cube (https://sketchfab.com/Shift4cube)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Medieval Tavern" (https://sketchfab.com/3d-models/low-poly-medieval-tavern-837fb34a8f7e4c9b9b9153ef9dea9e05) by Shift4cube (https://sketchfab.com/Shift4cube) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

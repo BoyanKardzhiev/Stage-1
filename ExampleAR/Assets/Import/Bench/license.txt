@@ -1,0 +1,11 @@
+Model Information:
+* title:	Medieval Table & Bench
+* source:	https://sketchfab.com/3d-models/medieval-table-bench-064e05669d3140f6b9e496471a3ac0c3
+* author:	Mikołaj Michalak (https://sketchfab.com/M_Michalak)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Medieval Table & Bench" (https://sketchfab.com/3d-models/medieval-table-bench-064e05669d3140f6b9e496471a3ac0c3) by Mikołaj Michalak (https://sketchfab.com/M_Michalak) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

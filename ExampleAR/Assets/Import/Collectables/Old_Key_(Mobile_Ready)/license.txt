@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Key (Mobile Ready)
+* source:	https://sketchfab.com/3d-models/old-key-mobile-ready-6e581db136284f45afad616dbd52044d
+* author:	HenRi (https://sketchfab.com/HenR1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Key (Mobile Ready)" (https://sketchfab.com/3d-models/old-key-mobile-ready-6e581db136284f45afad616dbd52044d) by HenRi (https://sketchfab.com/HenR1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
