@@ -13,7 +13,9 @@ public class SpawnableObject : MonoBehaviour
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
 
     [SerializeField]
-    List<GameObject> Quests = new List<GameObject>();
+    List<GameObject> Questions = new List<GameObject>();
+    [SerializeField]
+    List<GameObject> Answers = new List<GameObject>();
 
     [SerializeField]
     List<GameObject> PlacebleObjects = new List<GameObject>();
@@ -109,7 +111,8 @@ public class SpawnableObject : MonoBehaviour
         if(QuestSelection.questSelected)
         {
             quest = QuestSelection.questNumber;
-            Quests[quest].SetActive(true);
+            Questions[quest].SetActive(true);
+            Answers[quest].SetActive(true);
         }
     }
 }
