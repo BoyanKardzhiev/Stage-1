@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using TMPro;
 
 
 
@@ -12,11 +13,19 @@ public class SpawnableObject : MonoBehaviour
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
 
     [SerializeField]
+    List<GameObject> Quests = new List<GameObject>();
+
+    [SerializeField]
     List<GameObject> PlacebleObjects = new List<GameObject>();
 
     [SerializeField]
     List<GameObject> FoundObjects = new List<GameObject>();
 
+    [SerializeField]
+    List<TextMeshProUGUI> FoundText1 = new List<TextMeshProUGUI>();
+
+    [SerializeField]
+    List<TextMeshProUGUI> FoundText2 = new List<TextMeshProUGUI>();
 
     Camera arCam;
     GameObject spawnedObject;
@@ -24,6 +33,7 @@ public class SpawnableObject : MonoBehaviour
 
     public int objectNumber;
     int foundNumber;
+    int quest;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,14 +41,17 @@ public class SpawnableObject : MonoBehaviour
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
 
         objectNumber = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        QuestUpdate();
+
         spawnablePrefab = PlacebleObjects[objectNumber];
 
-        if (Input.touchCount == 0)
+        if (Input.touchCount == 0 || MenuManager.started)
             return;
 
         RaycastHit hit;
@@ -50,7 +63,7 @@ public class SpawnableObject : MonoBehaviour
             {
                 if(Physics.Raycast(ray, out hit))
                 {
-                    if(hit.collider.gameObject.tag == "Spawnable")
+                    if(hit.collider.gameObject.tag == "Spawnable" && !MenuManager.playing)
                     {
                         spawnedObject = hit.collider.gameObject;
                     }
@@ -58,6 +71,10 @@ public class SpawnableObject : MonoBehaviour
                     {
                         foundNumber = hit.collider.gameObject.GetComponent<FoundObject>().obj.CollectableNumber;
                         FoundObjects[foundNumber].SetActive(true);
+
+                        if(quest == 0) FoundText1[foundNumber].enabled = true;
+                        else FoundText2[foundNumber].enabled = true;
+
                         Destroy(hit.collider.gameObject);
                     }
                     else
@@ -85,5 +102,14 @@ public class SpawnableObject : MonoBehaviour
     public void ChangeObjectNumber(int change)
     {
         objectNumber = change;
+    }
+
+    void QuestUpdate()
+    {
+        if(QuestSelection.questSelected)
+        {
+            quest = QuestSelection.questNumber;
+            Quests[quest].SetActive(true);
+        }
     }
 }

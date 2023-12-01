@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     GameObject Dropdown;
 
+    [SerializeField]
+    GameObject Intro;
+    public static bool started;
+    public static bool playing;
+
     bool isHiddenButton;
     bool isHiddenDropdown;
     // Start is called before the first frame update
@@ -20,6 +26,9 @@ public class MenuManager : MonoBehaviour
     {
         isHiddenButton = false;
         isHiddenDropdown = false;
+
+        started = false;
+        playing = false;
     }
 
     // Update is called once per frame
@@ -38,5 +47,16 @@ public class MenuManager : MonoBehaviour
     public void ChangeVisualDropdown()
     {
         isHiddenDropdown = !isHiddenDropdown;
+    }
+
+    public void ChangeBool()
+    {
+        started = true;
+        playing = true;
+    }
+
+    public void StartIntro()
+    {
+        Intro.SetActive(true);
     }
 }

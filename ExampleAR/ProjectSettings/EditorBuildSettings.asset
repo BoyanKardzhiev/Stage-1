@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ExampleAssets/Scenes/SampleScene.unity
+    path: Assets/ExampleAssets/Scenes/Gameplay Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/ExampleAssets/Scenes/FullMap.unity
-    guid: 1537771c2bbd84e4a964d9fc8e226723
+    path: Assets/ExampleAssets/Scenes/Intro.unity
+    guid: 54edd6cc4b153bf4094f7550f788d9af
+  - enabled: 0
+    path: Assets/ExampleAssets/Scenes/QuestSelection.unity
+    guid: 2e8179054a38ed24e90ea53be6ec969c
+  - enabled: 0
+    path: Assets/ExampleAssets/Scenes/Quest #1 Cutscene.unity
+    guid: 4e597805bc4c460408b9885e5d38c82a
+  - enabled: 0
+    path: Assets/ExampleAssets/Scenes/Quest #2 Cutscene.unity
+    guid: 5b9fb92fe0fbf37408516a1ffaca573e
   m_configObjects:
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: 6c345e2c22528a94cb581cd0497780b1,
       type: 2}
