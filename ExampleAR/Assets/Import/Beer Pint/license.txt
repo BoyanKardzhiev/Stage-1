@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beer mug - lowpoly, gameready
+* source:	https://sketchfab.com/3d-models/beer-mug-lowpoly-gameready-9352c200537048eca281f2f48a8d25cf
+* author:	Dokazvo (https://sketchfab.com/dokazvo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beer mug - lowpoly, gameready" (https://sketchfab.com/3d-models/beer-mug-lowpoly-gameready-9352c200537048eca281f2f48a8d25cf) by Dokazvo (https://sketchfab.com/dokazvo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

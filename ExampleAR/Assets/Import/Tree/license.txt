@@ -1,0 +1,11 @@
+Model Information:
+* title:	Oak with Leaves (high-poly)
+* source:	https://sketchfab.com/3d-models/oak-with-leaves-high-poly-144c3c0947ce4dc890e15178f4c21b46
+* author:	Sereib (https://sketchfab.com/Sereib)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Oak with Leaves (high-poly)" (https://sketchfab.com/3d-models/oak-with-leaves-high-poly-144c3c0947ce4dc890e15178f4c21b46) by Sereib (https://sketchfab.com/Sereib) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

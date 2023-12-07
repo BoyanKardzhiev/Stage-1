@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pergamena con foglio vuoto
+* source:	https://sketchfab.com/3d-models/pergamena-con-foglio-vuoto-1b8a62aac6964ae3a6969769e5316282
+* author:	mruggi (https://sketchfab.com/mruggi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pergamena con foglio vuoto" (https://sketchfab.com/3d-models/pergamena-con-foglio-vuoto-1b8a62aac6964ae3a6969769e5316282) by mruggi (https://sketchfab.com/mruggi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

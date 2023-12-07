@@ -6,14 +6,19 @@ public class CloseCutscenes : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    GameObject closeCutscene, closeStartScreen, Tutorial;
+    GameObject closeCutscene, closeStartScreen, FinalItemKeyScreen, QuestSelection;
+
+    [SerializeField]
+    GameObject Tutorial, Answer, WantedItems;
     void Start()
     {
-        //MenuManager.started = false;
-        closeStartScreen.SetActive(false);
+        Answer.SetActive(true);
         Tutorial.SetActive(true);
-        closeCutscene.SetActive(false);
+        WantedItems.SetActive(true);
 
+        closeStartScreen.SetActive(false);
+        closeCutscene.SetActive(false);
+        QuestSelection.SetActive(false);
     }
 
     void Update()
@@ -22,6 +27,11 @@ public class CloseCutscenes : MonoBehaviour
         {
             MenuManager.started = false;
             Tutorial.SetActive(false);
+        }
+
+        if(Input.touchCount > 0 && SpawnableObject.FinalKeyScreenSpawned)
+        {
+            FinalItemKeyScreen.SetActive(false);
         }
     }
 }

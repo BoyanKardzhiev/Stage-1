@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Wooden Chair
+* source:	https://sketchfab.com/3d-models/old-wooden-chair-f206dde3fd5b4feeaf390fb741712ec1
+* author:	madridista_9248 (https://sketchfab.com/dimalukomo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Wooden Chair" (https://sketchfab.com/3d-models/old-wooden-chair-f206dde3fd5b4feeaf390fb741712ec1) by madridista_9248 (https://sketchfab.com/dimalukomo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

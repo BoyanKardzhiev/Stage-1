@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cobblestone
+* source:	https://sketchfab.com/3d-models/cobblestone-cc3f71690de440218c02b0989c3c9b96
+* author:	Reductio (https://sketchfab.com/Reductio)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cobblestone" (https://sketchfab.com/3d-models/cobblestone-cc3f71690de440218c02b0989c3c9b96) by Reductio (https://sketchfab.com/Reductio) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

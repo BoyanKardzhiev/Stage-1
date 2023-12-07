@@ -1,0 +1,11 @@
+Model Information:
+* title:	LANTERN
+* source:	https://sketchfab.com/3d-models/lantern-94183916d6b44bca93387b510bc7a97f
+* author:	huevu (https://sketchfab.com/huevu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "LANTERN" (https://sketchfab.com/3d-models/lantern-94183916d6b44bca93387b510bc7a97f) by huevu (https://sketchfab.com/huevu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Door
+* source:	https://sketchfab.com/3d-models/door-444b47a89ec34484b842966e9f83e134
+* author:	ItaMunMoon (https://sketchfab.com/ItaMunMoon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Door" (https://sketchfab.com/3d-models/door-444b47a89ec34484b842966e9f83e134) by ItaMunMoon (https://sketchfab.com/ItaMunMoon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cheese Board
+* source:	https://sketchfab.com/3d-models/cheese-board-eea4e410e32f4d1d87149a613ff3ee32
+* author:	Pratibha (https://sketchfab.com/Camay)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cheese Board" (https://sketchfab.com/3d-models/cheese-board-eea4e410e32f4d1d87149a613ff3ee32) by Pratibha (https://sketchfab.com/Camay) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

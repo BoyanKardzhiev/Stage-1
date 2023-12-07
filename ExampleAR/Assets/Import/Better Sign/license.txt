@@ -1,0 +1,11 @@
+Model Information:
+* title:	Medieval Signs
+* source:	https://sketchfab.com/3d-models/medieval-signs-d94b4dd778df42fea18ccddfee08d9b4
+* author:	AnyRPG (https://sketchfab.com/anyrpg)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Medieval Signs" (https://sketchfab.com/3d-models/medieval-signs-d94b4dd778df42fea18ccddfee08d9b4) by AnyRPG (https://sketchfab.com/anyrpg) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -15,6 +15,9 @@ public class MenuManager : MonoBehaviour
     GameObject Dropdown;
 
     [SerializeField]
+    GameObject DropdownEnterTheTavern;
+
+    [SerializeField]
     GameObject Intro;
     public static bool started;
     public static bool playing;
@@ -37,6 +40,7 @@ public class MenuManager : MonoBehaviour
         HideButton.SetActive(!isHiddenButton);
         //ShowButton.SetActive(isHiddenButton);
         Dropdown.SetActive(!isHiddenDropdown);
+        DropdownEnterTheTavern.SetActive(!isHiddenDropdown);
     }
 
     public void ChangeVisualButtons()

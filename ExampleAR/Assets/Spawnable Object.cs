@@ -9,8 +9,19 @@ using TMPro;
 public class SpawnableObject : MonoBehaviour
 {
     [SerializeField]
+    GameObject Indication, Scenery;
+
+    [SerializeField]
+    GameObject KeyPrefab, FinalItemKeyScreen, WantedItems, EnterTheTavern, TavernDoor;
+    Animator TavernDoorAnim;
+    int itemsCollected;
+    public static bool FinalKeyScreenSpawned;
+
+    [SerializeField]
     ARRaycastManager m_RaycastManager;
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
+    public static Vector3 spawnedPosition;
+    public static bool firstItemSpawned;
 
     [SerializeField]
     List<GameObject> Questions = new List<GameObject>();
@@ -36,20 +47,29 @@ public class SpawnableObject : MonoBehaviour
     public int objectNumber;
     int foundNumber;
     int quest;
+    Animator foundObjectAnim;
     // Start is called before the first frame update
     void Start()
     {
+        Indication.SetActive(false);
+        Scenery.SetActive(false);
+
+        firstItemSpawned = false;
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
 
         objectNumber = 0;
-
+        itemsCollected = 0;
+        FinalItemKeyScreen.SetActive(false);
+        FinalKeyScreenSpawned = false;
+        TavernDoorAnim = TavernDoor.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         QuestUpdate();
+        HandleKeySpawn();
 
         spawnablePrefab = PlacebleObjects[objectNumber];
 
@@ -73,15 +93,40 @@ public class SpawnableObject : MonoBehaviour
                     {
                         foundNumber = hit.collider.gameObject.GetComponent<FoundObject>().obj.CollectableNumber;
                         FoundObjects[foundNumber].SetActive(true);
+                        itemsCollected++;
 
-                        if(quest == 0) FoundText1[foundNumber].enabled = true;
-                        else FoundText2[foundNumber].enabled = true;
+                        if(foundNumber == 4)
+                        {
+                            TavernDoorAnim.SetTrigger("KeyCollected");
+                        }
+
+                        if (quest == 0)
+                        {
+                            foundObjectAnim = FoundText1[foundNumber].GetComponent<Animator>();
+                            FoundText1[foundNumber].enabled = true;
+                            foundObjectAnim.SetTrigger("FoundMove");
+                        }
+                        else
+                        {
+                            foundObjectAnim = FoundText2[foundNumber].GetComponent<Animator>();
+                            FoundText2[foundNumber].enabled = true;
+                            foundObjectAnim.SetTrigger("FoundMove");
+                        }
 
                         Destroy(hit.collider.gameObject);
                     }
                     else
                     {
                         SpawnPrefab(m_Hits[0].pose.position, m_Hits[0].pose.rotation);
+
+                        if(!firstItemSpawned)
+                        {
+                            firstItemSpawned = true;
+                            Scenery.transform.position = m_Hits[0].pose.position;
+                            Scenery.transform.rotation = m_Hits[0].pose.rotation;
+                            Scenery.SetActive(true);
+                            //Indication.SetActive(true);
+                        }
                     }    
                 }
             }
@@ -98,7 +143,12 @@ public class SpawnableObject : MonoBehaviour
 
     private void SpawnPrefab(Vector3 spawnPosition, Quaternion rotation)
     {
-        spawnedObject = Instantiate(spawnablePrefab, spawnPosition, rotation);
+        if (objectNumber == 9)
+        {
+            spawnedObject = Instantiate(spawnablePrefab, spawnPosition, rotation);
+            spawnedObject.SetActive(false);
+        }
+        else spawnedObject = Instantiate(spawnablePrefab, spawnPosition, rotation);
     }
 
     public void ChangeObjectNumber(int change)
@@ -114,5 +164,30 @@ public class SpawnableObject : MonoBehaviour
             Questions[quest].SetActive(true);
             Answers[quest].SetActive(true);
         }
+    }
+
+    void HandleKeySpawn()
+    {
+        if (itemsCollected < 4)
+        {
+            KeyPrefab.SetActive(false);
+        }
+        else 
+        {
+            KeyPrefab.SetActive(true);
+            if(!FinalKeyScreenSpawned)
+            {
+                WantedItems.SetActive(false);
+                EnterTheTavern.SetActive(true);
+
+                FinalItemKeyScreen.SetActive(true);
+                FinalKeyScreenSpawned = true;
+            }
+        }
+    }
+
+    public void CollectItem()
+    {
+        itemsCollected++;
     }
 }
