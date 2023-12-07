@@ -9,12 +9,14 @@ public class CloseCutscenes : MonoBehaviour
     GameObject closeCutscene, closeStartScreen, FinalItemKeyScreen, QuestSelection;
 
     [SerializeField]
-    GameObject Tutorial, Answer, WantedItems;
+    GameObject Tutorial, Answer, WantedItems, DistanceBar, Scenery;
     void Start()
     {
         Answer.SetActive(true);
         Tutorial.SetActive(true);
         WantedItems.SetActive(true);
+        DistanceBar.SetActive(true);
+        Scenery.SetActive(true);
 
         closeStartScreen.SetActive(false);
         closeCutscene.SetActive(false);

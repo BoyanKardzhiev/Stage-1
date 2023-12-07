@@ -19,6 +19,11 @@ public class SpawnableObject : MonoBehaviour
 
     [SerializeField]
     ARRaycastManager m_RaycastManager;
+    bool spawned;
+
+    [SerializeField]
+    ARPlaneManager m_PlaneManager;
+
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
     public static Vector3 spawnedPosition;
     public static bool firstItemSpawned;
@@ -41,6 +46,7 @@ public class SpawnableObject : MonoBehaviour
     List<TextMeshProUGUI> FoundText2 = new List<TextMeshProUGUI>();
 
     Camera arCam;
+    Transform arCamTransform;
     GameObject spawnedObject;
     GameObject spawnablePrefab;
 
@@ -57,6 +63,11 @@ public class SpawnableObject : MonoBehaviour
         firstItemSpawned = false;
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
+        arCamTransform = GameObject.Find("AR Camera").GetComponent<Transform>();
+
+        //m_PlaneManager = GetComponent<ARPlaneManager>();
+        m_PlaneManager.planesChanged += PlaneChanged;
+        spawned = false;
 
         objectNumber = 0;
         itemsCollected = 0;
@@ -73,10 +84,50 @@ public class SpawnableObject : MonoBehaviour
 
         spawnablePrefab = PlacebleObjects[objectNumber];
 
+
+
         if (Input.touchCount == 0 || MenuManager.started)
             return;
-
         RaycastHit hit;
+        Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
+
+        if (m_RaycastManager.Raycast(Input.GetTouch(0).position,m_Hits))
+        {
+            if(Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
+            {
+                if(Physics.Raycast(ray, out hit))
+                {
+                    if(hit.collider.gameObject.tag == "Collectable")
+                    {
+                        foundNumber = hit.collider.gameObject.GetComponent<FoundObject>().obj.CollectableNumber;
+                        FoundObjects[foundNumber].SetActive(true);
+                        itemsCollected++;
+
+                        if(foundNumber == 4)
+                        {
+                            TavernDoorAnim.SetTrigger("KeyCollected");
+                        }
+
+                        if (quest == 0)
+                        {
+                            foundObjectAnim = FoundText1[foundNumber].GetComponent<Animator>();
+                            FoundText1[foundNumber].enabled = true;
+                            foundObjectAnim.SetTrigger("FoundMove");
+                        }
+                        else
+                        {
+                            foundObjectAnim = FoundText2[foundNumber].GetComponent<Animator>();
+                            FoundText2[foundNumber].enabled = true;
+                            foundObjectAnim.SetTrigger("FoundMove");
+                        }
+
+                        Destroy(hit.collider.gameObject);
+                    }    
+                }
+            }
+        }
+
+        /*RaycastHit hit;
         Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
 
         if (m_RaycastManager.Raycast(Input.GetTouch(0).position,m_Hits))
@@ -138,7 +189,7 @@ public class SpawnableObject : MonoBehaviour
             {
                 spawnedObject = null;
             }
-        }
+        }*/
     }
 
     private void SpawnPrefab(Vector3 spawnPosition, Quaternion rotation)
@@ -189,5 +240,21 @@ public class SpawnableObject : MonoBehaviour
     public void CollectItem()
     {
         itemsCollected++;
+    }
+
+    private void PlaneChanged(ARPlanesChangedEventArgs args)
+    {
+        if(args.added != null && !spawned)
+        {
+            ARPlane arPlane = args.added[0];
+            //spawnedObject = Instantiate(PlacebleObjects[2], arPlane.transform.position, Quaternion.identity);
+
+            Vector3 startPosition = new Vector3(arPlane.transform.position.x, arPlane.transform.position.y, arCamTransform.position.z);
+            Scenery.transform.position = startPosition;
+            Scenery.transform.Rotate(arPlane.transform.rotation.x, arCamTransform.rotation.y, arPlane.transform.rotation.z);
+            //Scenery.SetActive(true);
+
+            spawned = true;
+        }
     }
 }
