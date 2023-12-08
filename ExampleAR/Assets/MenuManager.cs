@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject FinalKey, WantedItems, DistanceBar, Buttons, HideMenu, Scenery;
+    GameObject FinalKey, WantedItems, DistanceBar, Buttons, HideMenu, Scenery, StartScreen;
 
     [SerializeField]
     GameObject HideButton;
@@ -30,6 +30,8 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartScreen.SetActive(true);
+
         FinalKey.SetActive(false);
         WantedItems.SetActive(false);
         DistanceBar.SetActive(false);

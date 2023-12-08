@@ -32546,6 +32546,7 @@ MonoBehaviour:
   Buttons: {fileID: 496441732}
   HideMenu: {fileID: 501529256}
   Scenery: {fileID: 1085835528}
+  StartScreen: {fileID: 1849277798}
   HideButton: {fileID: 501529256}
   ShowButton: {fileID: 1421661276}
   Dropdown: {fileID: 1766797044}
