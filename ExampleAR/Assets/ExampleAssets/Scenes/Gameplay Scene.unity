@@ -8907,7 +8907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &532271285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11548,12 +11548,6 @@ Transform:
   - {fileID: 572620148}
   m_Father: {fileID: 480183386}
   m_LocalEulerAnglesHint: {x: 0, y: 218.494, z: 0}
---- !u!1 &727538110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 207458121586220458, guid: 475f6b1c77081944c981d650f7129019,
-    type: 3}
-  m_PrefabInstance: {fileID: 7001311465722592482}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &729759422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12257,7 +12251,7 @@ MonoBehaviour:
   FinalItemKeyScreen: {fileID: 1658390018}
   WantedItems: {fileID: 1765553102}
   EnterTheTavern: {fileID: 986317910}
-  TavernDoor: {fileID: 727538110}
+  TavernDoor: {fileID: 1655248938}
   m_RaycastManager: {fileID: 388525033}
   m_PlaneManager: {fileID: 388525032}
   Questions:
@@ -27866,7 +27860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1658390019
 RectTransform:
   m_ObjectHideFlags: 0

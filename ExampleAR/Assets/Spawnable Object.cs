@@ -251,7 +251,7 @@ public class SpawnableObject : MonoBehaviour
 
             Vector3 startPosition = new Vector3(arPlane.transform.position.x, arPlane.transform.position.y, arCamTransform.position.z);
             Scenery.transform.position = startPosition;
-            Scenery.transform.Rotate(arPlane.transform.rotation.x, arCamTransform.rotation.y, arPlane.transform.rotation.z);
+            Scenery.transform.Rotate(arPlane.transform.rotation.x, 0, arPlane.transform.rotation.z);
             //Scenery.SetActive(true);
 
             spawned = true;

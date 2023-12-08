@@ -31,7 +31,7 @@ public class CloseCutscenes : MonoBehaviour
             Tutorial.SetActive(false);
         }
 
-        if(Input.touchCount > 0 && SpawnableObject.FinalKeyScreenSpawned)
+        if(Input.GetTouch(0).phase == TouchPhase.Began && SpawnableObject.FinalKeyScreenSpawned)
         {
             FinalItemKeyScreen.SetActive(false);
         }
