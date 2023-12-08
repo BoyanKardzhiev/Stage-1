@@ -255,6 +255,8 @@ public class SpawnableObject : MonoBehaviour
             //Scenery.SetActive(true);
 
             spawned = true;
+
+            m_PlaneManager.enabled = false;
         }
     }
 }
