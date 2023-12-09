@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class DistanceBar : MonoBehaviour
 {
     public Slider slider;
+    public Gradient gradient;
+    public Image fill;
+
     int distancePassed;
 
     void Start()
@@ -18,5 +21,7 @@ public class DistanceBar : MonoBehaviour
     {
         distancePassed = distancePassed + distance;
         slider.value = distancePassed;
+
+        fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 }

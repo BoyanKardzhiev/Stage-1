@@ -12,10 +12,12 @@ public class SpawnableObject : MonoBehaviour
     GameObject Indication, Scenery;
 
     [SerializeField]
-    GameObject KeyPrefab, FinalItemKeyScreen, WantedItems, EnterTheTavern, TavernDoor;
-    Animator TavernDoorAnim;
+    GameObject KeyPrefab, FinalItemKeyScreen, WantedItems, EnterTheTavern, TavernDoor, QuestCompleted;
+    Animator TavernDoorAnim, QuestCompletedAnim;
     int itemsCollected;
     public static bool FinalKeyScreenSpawned;
+    float waitBeforeFinalKeyScreen = 3.5f;
+    float currentTime;
 
     [SerializeField]
     ARRaycastManager m_RaycastManager;
@@ -74,6 +76,8 @@ public class SpawnableObject : MonoBehaviour
         FinalItemKeyScreen.SetActive(false);
         FinalKeyScreenSpawned = false;
         TavernDoorAnim = TavernDoor.GetComponent<Animator>();
+        QuestCompletedAnim = QuestCompleted.GetComponent<Animator>();
+        currentTime = 0f;
     }
 
     // Update is called once per frame
@@ -106,6 +110,7 @@ public class SpawnableObject : MonoBehaviour
                         if(foundNumber == 4)
                         {
                             TavernDoorAnim.SetTrigger("KeyCollected");
+                            QuestCompletedAnim.SetTrigger("QuestCompleted");
                         }
 
                         if (quest == 0)
@@ -225,15 +230,19 @@ public class SpawnableObject : MonoBehaviour
         }
         else 
         {
-            KeyPrefab.SetActive(true);
-            if(!FinalKeyScreenSpawned)
+            if (currentTime >= waitBeforeFinalKeyScreen)
             {
-                WantedItems.SetActive(false);
-                EnterTheTavern.SetActive(true);
+                KeyPrefab.SetActive(true);
+                if (!FinalKeyScreenSpawned)
+                {
+                    WantedItems.SetActive(false);
+                    EnterTheTavern.SetActive(true);
 
-                FinalItemKeyScreen.SetActive(true);
-                FinalKeyScreenSpawned = true;
+                    FinalItemKeyScreen.SetActive(true);
+                    FinalKeyScreenSpawned = true;
+                }
             }
+            else currentTime += Time.deltaTime;
         }
     }
 
@@ -251,7 +260,7 @@ public class SpawnableObject : MonoBehaviour
 
             Vector3 startPosition = new Vector3(arPlane.transform.position.x, arPlane.transform.position.y, arCamTransform.position.z);
             Scenery.transform.position = startPosition;
-            Scenery.transform.Rotate(arPlane.transform.rotation.x, 0, arPlane.transform.rotation.z);
+            Scenery.transform.Rotate(arPlane.transform.rotation.x, arCam.transform.rotation.y , arPlane.transform.rotation.z);
             //Scenery.SetActive(true);
 
             spawned = true;
