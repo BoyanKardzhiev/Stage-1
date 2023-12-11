@@ -13,38 +13,19 @@ public class DistanceBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
+    public int maxDistance;
     int distancePassed;
 
     void Start()
     {
+        slider.maxValue = maxDistance;
         slider.value = 0;
         distancePassed = 0;
     }
 
     void Update()
     {
-        switch(distancePassed)
-        {
-        case 1:
-                messages.text = "4 meters left!";
-                break;
-            case 2:
-                messages.text = "3 meters left!";
-                break;
-        case 3:
-                messages.text = "2 meters left!";
-                break;
-            case 4:
-                messages.text = "1 meters left!";
-                break;
-            case 5:
-                messages.text = "Final tavern reached!";
-                break;
-
-            default:
-                messages.text = "5 meters left!";
-                break;
-        }
+        messages.text = (maxDistance - distancePassed) + " meters left!";
     }
     public void SetDistance(int distance)
     {

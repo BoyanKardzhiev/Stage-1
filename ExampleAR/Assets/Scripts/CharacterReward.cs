@@ -21,8 +21,4 @@ public class CharacterReward : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
