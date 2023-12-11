@@ -75,4 +75,9 @@ public class MenuManager : MonoBehaviour
     {
         Intro.SetActive(true);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

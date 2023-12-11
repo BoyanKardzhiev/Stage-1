@@ -26,19 +26,23 @@ public class DistanceBar : MonoBehaviour
         switch(distancePassed)
         {
         case 1:
-        case 2:
-                messages.text = "Keep going!";
+                messages.text = "4 meters left!";
+                break;
+            case 2:
+                messages.text = "3 meters left!";
                 break;
         case 3:
-        case 4:
-                messages.text = "Almost there!";
+                messages.text = "2 meters left!";
                 break;
-        case 5:
+            case 4:
+                messages.text = "1 meters left!";
+                break;
+            case 5:
                 messages.text = "Final tavern reached!";
                 break;
 
             default:
-                messages.text = "Welcome!";
+                messages.text = "5 meters left!";
                 break;
         }
     }
