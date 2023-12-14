@@ -42,7 +42,7 @@ public class MenuManager : MonoBehaviour
         isHiddenButton = false;
         isHiddenDropdown = false;
 
-        started = true;
+        started = false;
         playing = false;
     }
 

@@ -35,8 +35,8 @@ public class SpawnableObject : MonoBehaviour
     [SerializeField]
     List<GameObject> Answers = new List<GameObject>();
 
-    [SerializeField]
-    List<GameObject> PlacebleObjects = new List<GameObject>();
+    //[SerializeField]
+    //List<GameObject> PlacebleObjects = new List<GameObject>();
 
     [SerializeField]
     List<GameObject> FoundObjects = new List<GameObject>();
@@ -86,11 +86,11 @@ public class SpawnableObject : MonoBehaviour
         QuestUpdate();
         HandleKeySpawn();
 
-        spawnablePrefab = PlacebleObjects[objectNumber];
+        //spawnablePrefab = PlacebleObjects[objectNumber];
 
 
 
-        if (Input.touchCount == 0 || MenuManager.started)
+        if (Input.touchCount == 0 || !MenuManager.started)
             return;
         RaycastHit hit;
         Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
